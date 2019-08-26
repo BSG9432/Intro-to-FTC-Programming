@@ -8,11 +8,13 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class Challenge1 extends LinearOpMode {
     public DcMotor left;
     public DcMotor right;
+    public Servo servoBoi;
 
     @Override
     public void runOpMode() throws InterruptedException {
         left = hardwareMap.dcMotor.get("left");
         right = hardwareMap.dcMotor.get("right");
+        servoBoi = hardwareMap.dcMotor.get("servoBoi");
 
         waitForStart();
 
@@ -26,6 +28,8 @@ public class Challenge1 extends LinearOpMode {
 
         left.setPower(.5);
         right.setPower(-.5);
+        
+        servo.setPosition(.75);
 
 
 
