@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 @Autonomous(name = "Challenge1")
 public class Challenge1 extends LinearOpMode {
@@ -19,8 +20,8 @@ public class Challenge1 extends LinearOpMode {
         waitForStart();
 
         //Go forward for 3 seconds at full speed
-        left.setPower(-1);
-        right.setPower(1);
+        left.setPower(-.25);
+        right.setPower(.25);
         sleep(3000);
 
         //stop for 2 seconds
@@ -32,8 +33,9 @@ public class Challenge1 extends LinearOpMode {
         left.setPower(.5);
         right.setPower(-.5);
         sleep(3000);
-        
-        servo.setPosition(.75);
+
+        //set servo position to .75
+        servoBoi.setPosition(.75);
 
 
     }
