@@ -19,9 +19,9 @@ public class Challenge1 extends LinearOpMode {
 
         waitForStart();
 
-        //Go forward for 3 seconds at full speed
-        left.setPower(-.25);
-        right.setPower(.25);
+        //Go forward for 5 seconds at full speed
+        left.setPower(-.5);
+        right.setPower(.5);
         sleep(3000);
 
         //stop for 2 seconds
