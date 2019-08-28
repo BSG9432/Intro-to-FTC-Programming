@@ -5,7 +5,6 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
 public class WowNewIntro extends LinearOpMode {
-    @Override
     public DcMotor left;
     public DcMotor right;
     public Servo servoBoi;
