@@ -54,10 +54,10 @@ public class mecanumTele extends OpMode {
 
         if (gamepad1.left_stick_x > .1) // strafe RIGHT
         {
-            frontRight.setPower(-1);
-            backRight.setPower(1);
-            frontLeft.setPower(1);
-            backLeft.setPower(-1);
+            frontRight.setPower(-gamepad1.left_stick_x);
+            backRight.setPower(gamepad1.left_stick_x);
+            frontLeft.setPower(gamepad1.left_stick_x);
+            backLeft.setPower(-gamepad1.left_stick_x);
 
         }
         else
@@ -70,10 +70,10 @@ public class mecanumTele extends OpMode {
 
         if (gamepad1.left_stick_x < -.1) // strafe LEFT
         {
-            frontRight.setPower(1);
-            backRight.setPower(-1);
-            frontLeft.setPower(-1);
-            backLeft.setPower(1);
+            frontRight.setPower(gamepad1.left_stick_x);
+            backRight.setPower(-gamepad1.left_stick_x);
+            frontLeft.setPower(-gamepad1.left_stick_x);
+            backLeft.setPower(gamepad1.left_stick_x);
 
         }
         else
@@ -84,6 +84,8 @@ public class mecanumTele extends OpMode {
             backLeft.setPower(0);
         }
 
+       
+        //just in case left_stick_x ends up not working...
         /*
         if (gamepad1.right_bumper) // strafe RIGHT (rightBUMPER)
         {
