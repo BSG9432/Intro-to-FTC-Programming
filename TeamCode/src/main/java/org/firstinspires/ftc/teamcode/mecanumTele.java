@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@TeleOp (name = "Mecanum")
+@TeleOp (name = "MecanumTele")
 
 public class mecanumTele extends OpMode {
 
@@ -54,10 +54,10 @@ public class mecanumTele extends OpMode {
 
         if (gamepad1.left_stick_x > .1) // strafe RIGHT
         {
-            frontRight.setPower(-gamepad1.right_stick_y);
-            backRight.setPower(gamepad1.right_stick_y);
-            frontLeft.setPower(gamepad1.left_stick_y);
-            backLeft.setPower(-gamepad1.left_stick_y);
+            frontRight.setPower(-gamepad1.left_stick_x);
+            backRight.setPower(gamepad1.left_stick_x);
+            frontLeft.setPower(gamepad1.left_stick_x);
+            backLeft.setPower(-gamepad1.left_stick_x);
 
         }
         else
@@ -70,10 +70,10 @@ public class mecanumTele extends OpMode {
 
         if (gamepad1.left_stick_x < -.1) // strafe LEFT
         {
-            frontRight.setPower(gamepad1.right_stick_y);
-            backRight.setPower(-gamepad1.right_stick_y);
-            frontLeft.setPower(-gamepad1.left_stick_y);
-            backLeft.setPower(gamepad1.left_stick_y);
+            frontRight.setPower(gamepad1.left_stick_x);
+            backRight.setPower(-gamepad1.left_stick_x);
+            frontLeft.setPower(-gamepad1.left_stick_x);
+            backLeft.setPower(gamepad1.left_stick_x);
 
         }
         else
