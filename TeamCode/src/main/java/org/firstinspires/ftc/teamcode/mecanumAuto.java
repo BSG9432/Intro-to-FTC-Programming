@@ -22,11 +22,13 @@ public class mecanumAuto extends LinearOpMode {
         frontLeft = hardwareMap.dcMotor.get("frontLeft");
         backLeft = hardwareMap.dcMotor.get("backLeft");
 
-        backLeft.setDirection(DcMotorSimple.Direction.REVERSE); //Makes left side rotate forward by default
+        //Makes left side rotate forward by default
+        backLeft.setDirection(DcMotorSimple.Direction.REVERSE); 
         frontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
 
         waitForStart();
-
+        
+        //wow start writing code here owo
         drive(1,1000);
         drive(-1, 1000);
         pivotTurnLeft(1,1000);
@@ -36,7 +38,7 @@ public class mecanumAuto extends LinearOpMode {
 
     }
 
-    //METHODS BE HERE!
+    //METHODS/FUNCTIONS BE HERE!
     public void drive (double power,int time) //Forward / Backwards movement (Can be + or -)
     {
         frontLeft.setPower(power);
