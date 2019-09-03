@@ -25,6 +25,11 @@ public class mecanumTele extends OpMode {
         backLeft.setDirection(DcMotorSimple.Direction.REVERSE); //Makes left side rotate forward by default
         frontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
 
+        frontRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        backRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        frontLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        backLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+
     }
 
     @Override

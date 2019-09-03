@@ -26,6 +26,12 @@ public class mecanumAuto extends LinearOpMode {
         backLeft.setDirection(DcMotorSimple.Direction.REVERSE); 
         frontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
 
+        frontRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        backRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        frontLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        backLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+
+
         waitForStart();
         
         //wow start writing code here owo
