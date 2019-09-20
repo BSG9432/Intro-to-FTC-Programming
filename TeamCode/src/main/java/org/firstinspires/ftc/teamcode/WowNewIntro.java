@@ -5,14 +5,13 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
-@Autonomous (name = "cringe_code")//this is what the code is showed on le phone
-                                //so for competitions, you need a different name fr0m other programs
-public class WowNewIntro extends LinearOpMode {//im useless, which is helpful
+//code for robot with 2 wheels built for the programming workshop
+@Autonomous (name = "cringe_code")//this is the name of the code that shows up on the phone
+                                //for competitions, you need a different name for each program
+public class WowNewIntro extends LinearOpMode {
     public DcMotor left;
     public DcMotor right;
-    public Servo servoBoi;//hi jedi, and everyone else
-
-
+    public Servo servoBoi;
 
     @Override//
     public void runOpMode() throws InterruptedException {
@@ -25,7 +24,7 @@ public class WowNewIntro extends LinearOpMode {//im useless, which is helpful
         //start writing your code here wow very code
 
         goForward(.5,.5,5000);//go forward for 5sec
-        goBackwards(1,1,5000);//go bakward for 5 seconds
+        goBackwards(1,1,5000);//go backwards for 5 seconds
         pivotTurnRight(.5,.5,10000);
         pointTurnLeft(1,10000);
         goBackwards(.75,.75,3500);

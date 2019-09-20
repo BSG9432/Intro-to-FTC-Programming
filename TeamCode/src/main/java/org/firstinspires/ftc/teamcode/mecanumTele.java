@@ -20,7 +20,7 @@ public class mecanumTele extends OpMode {
         frontRight = hardwareMap.dcMotor.get("frontRight");
         backRight = hardwareMap.dcMotor.get("backRight");
         frontLeft = hardwareMap.dcMotor.get("frontLeft");
-        backLeft = hardwareMap.dcMotor.get("backLeft");
+        backLeft = hardwareMap.dcMotor.get("backLeft");//yay ryssa! :D
 
         backLeft.setDirection(DcMotorSimple.Direction.REVERSE); //Makes left side rotate forward by default
         frontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
@@ -28,7 +28,7 @@ public class mecanumTele extends OpMode {
         frontRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         backRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         frontLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        backLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        backLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);//owouwuewe!
 
     }
 
@@ -37,8 +37,8 @@ public class mecanumTele extends OpMode {
 
         if(Math.abs(gamepad1.left_stick_y) > .1) //Left Side
         {
-            frontLeft.setPower(gamepad1.left_stick_y);
-            backLeft.setPower(gamepad1.left_stick_y);
+            frontLeft.setPower(-gamepad1.left_stick_y);
+            backLeft.setPower(-gamepad1.left_stick_y);
         }
         else
         {
@@ -48,8 +48,8 @@ public class mecanumTele extends OpMode {
 
         if(Math.abs(gamepad1.right_stick_y) > .1) //Right Side
         {
-            frontRight.setPower(gamepad1.right_stick_y);
-            backRight.setPower(gamepad1.right_stick_y);
+            frontRight.setPower(-gamepad1.right_stick_y);
+            backRight.setPower(-gamepad1.right_stick_y);
         }
         else
         {
@@ -91,7 +91,7 @@ public class mecanumTele extends OpMode {
 
        
         //just in case left_stick_x ends up not working...
-        /*
+
         if (gamepad1.right_bumper) // strafe RIGHT (rightBUMPER)
         {
             frontRight.setPower(-1);
@@ -123,7 +123,7 @@ public class mecanumTele extends OpMode {
             frontLeft.setPower(0);
             backLeft.setPower(0);
         }
-        */
+
 
     }
 }

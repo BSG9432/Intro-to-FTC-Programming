@@ -19,7 +19,7 @@ public class mecanumAuto extends LinearOpMode {
 
         frontRight = hardwareMap.dcMotor.get("frontRight");
         backRight = hardwareMap.dcMotor.get("backRight");
-        frontLeft = hardwareMap.dcMotor.get("frontLeft");
+        frontLeft = hardwareMap.dcMotor.get("frontLeft");//do the thing
         backLeft = hardwareMap.dcMotor.get("backLeft");
 
         //Makes left side rotate forward by default
@@ -41,6 +41,9 @@ public class mecanumAuto extends LinearOpMode {
         pivotTurnRight(1,1000);
         strafeLeft(1,1000);
         strafeRight(1,1000);
+
+        drive(1, 3000);
+
 
     }
 
